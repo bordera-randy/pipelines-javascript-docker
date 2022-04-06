@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: borderarandypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: borderarandypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: borderarandypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: borderarandypipelinesjavascriptdocker 
+          image: uwpocinfraautomationregistry.azurecr.io/borderarandypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
